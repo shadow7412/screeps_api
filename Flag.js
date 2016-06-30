@@ -32,7 +32,7 @@ Flag.prototype = {
     /**
      * Remove the flag.
      */
-    remove: function () {},
+    remove: null,
 
     /**
      * Set new color of the flag.
@@ -40,7 +40,7 @@ Flag.prototype = {
      * @param {string} [secondaryColor] - Secondary color of the flag. One of the COLOR_* constants.
      * @return {object}
      */
-    setColor: function () {},
+    setColor: function (color, secondaryColor (optional)) {},
 
     /**
      * Set new position of the flag.
@@ -49,5 +49,5 @@ Flag.prototype = {
      * @param {object} pos - Can be a RoomPosition object or any object containing RoomPosition.
      * @return {object}
      */
-    setPosition: function () {},
+    setPosition: function (x, y, pos) {},
 }

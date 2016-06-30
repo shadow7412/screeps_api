@@ -40,5 +40,5 @@ StructureNuker.prototype = {
      * @param {RoomPosition} pos - The target room position.
      * @return {object}
      */
-    launchNuke: function () {},
+    launchNuke: function (pos) {},
 }

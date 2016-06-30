@@ -24,5 +24,5 @@ StructureStorage.prototype = {
      * @param {number} [amount] - The amount of resources to be transferred. If omitted, all the available amount is used.
      * @return {object}
      */
-    transfer: function () {},
+    transfer: function (target, resourceType, amount (optional)) {},
 }

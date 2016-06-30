@@ -10,5 +10,5 @@ StructureObserver.prototype = {
      * @param {string} roomName - The name of the target room.
      * @return {object}
      */
-    observeRoom: function () {},
+    observeRoom: function (roomName) {},
 }

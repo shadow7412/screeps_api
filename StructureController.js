@@ -44,5 +44,5 @@ StructureController.prototype = {
     /**
      * Make your claimed controller neutral again.
      */
-    unclaim: function () {},
+    unclaim: null,
 }

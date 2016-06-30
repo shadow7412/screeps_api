@@ -50,7 +50,7 @@ CLAIM
      * @param {string} [name] - The name of a new creep. It should be unique creep name, i.e. the Game.creeps object should not contain another creep with the same name (hash key). If not defined, a random name will be generated.
      * @return {object}
      */
-    canCreateCreep: function () {},
+    canCreateCreep: function (body, name (optional)) {},
 
     /**
      * Start the creep spawning process.
@@ -67,21 +67,21 @@ TOUGH
      * @param {any} [memory] - The memory of a new creep. If provided, it will be immediately stored into Memory.creeps[name].
      * @return {object}
      */
-    createCreep: function () {},
+    createCreep: function (body, name (optional), memory (optional)) {},
 
     /**
      * Kill the creep and drop up to 100% of resources spent on its spawning and boosting depending on remaining life time. The target should be at adjacent square.
      * @param {Creep} target - The target creep object.
      * @return {object}
      */
-    recycleCreep: function () {},
+    recycleCreep: function (target) {},
 
     /**
      * Increase the remaining time to live of the target creep. The target should be at adjacent square. The spawn should not be busy with the spawning process. Each execution increases the creep's timer by amount of ticks according to this formula: floor(600/body_size). Energy required for each execution is determined using this formula: ceil(creep_cost/2.5/body_size). Renewing a creep removes all of its boosts.
      * @param {Creep} target - The target creep object.
      * @return {object}
      */
-    renewCreep: function () {},
+    renewCreep: function (target) {},
 
     /**
      * Transfer the energy from the spawn to a creep.
@@ -89,5 +89,5 @@ TOUGH
      * @param {number} [amount] - The amount of energy to be transferred. If omitted, all the remaining amount of energy will be used.
      * @return {object}
      */
-    transferEnergy: function () {},
+    transferEnergy: function (target, amount (optional)) {},
 }

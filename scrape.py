@@ -1,21 +1,23 @@
 #!/usr/bin/env python
 
 import re
+import json
 from bs4 import BeautifulSoup
 from requests import get
-from multiprocessing.dummy import Pool
 from collections import OrderedDict
-base_url = "http://support.screeps.com"
 
+base_url = "http://support.screeps.com"
 response = get(base_url + "/hc/en-us/articles/203084991-API-Reference")
 response.raise_for_status()
 b = BeautifulSoup(response.text, "html.parser")
 
-# Load constants
-
+# Load globals
+with open("globals.js", "w") as globals_file:
+    globals_file.write(b.find("pre").find("code").string)
 
 # Load other classes
 RE_PROTO_DEF = re.compile(r".*<a.*")
+
 
 def write_prototype(prototype):
     print(prototype.text, prototype["href"])
@@ -54,7 +56,6 @@ def write_prototype(prototype):
                 attr_body = "null"
             except AttributeError:
                 # This is not an attribute... must be a function.
-                attr_body = "function () {}"
                 active_param = None
                 param_cache = OrderedDict()
                 args_container = attr.find("div", {"class": "api-args"})
@@ -66,8 +67,8 @@ def write_prototype(prototype):
                         else:
                             param_cache[active_param][div["class"][0].split("-")[-1]] = div.text.strip()
                     for param in param_cache.values():
-                        desc = param.get("desc", "object")
-                        title = param.get("title", "IDUNNOLOL")
+                        desc = param["desc"]
+                        title = param["title"]
                         type = param.get("type", "object")
 
                         if "(optional)" in title:
@@ -76,6 +77,7 @@ def write_prototype(prototype):
                     return_type = "object"
 
                     attr_file.write("     * @return {{{}}}\n".format(return_type))
+                    attr_body = "function ({}) {{}}".format(", ".join(param_cache.keys()))
                 else:
                     # No arguments to function
                     pass

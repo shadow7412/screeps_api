@@ -32,17 +32,17 @@ Structure.prototype = {
     /**
      * Destroy this structure immediately.
      */
-    destroy: function () {},
+    destroy: null,
 
     /**
      * Check whether this structure can be used. If the room controller level is not enough, then this method will return false, and the structure will be highlighted with red in the game.
      */
-    isActive: function () {},
+    isActive: null,
 
     /**
      * Toggle auto notification when the structure is under attack. The notification will be sent to your account email. Turned on by default.
      * @param {boolean} enabled - Whether to enable notification or disable.
      * @return {object}
      */
-    notifyWhenAttacked: function () {},
+    notifyWhenAttacked: function (enabled) {},
 }

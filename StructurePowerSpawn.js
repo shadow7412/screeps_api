@@ -34,12 +34,12 @@ StructurePowerSpawn.prototype = {
      * @param {string} roomName - The name of the power creep.
      * @return {object}
      */
-    createPowerCreep: function () {},
+    createPowerCreep: function (roomName) {},
 
     /**
      * Register power resource units into your account. Registered power allows to develop power creeps skills.
      */
-    processPower: function () {},
+    processPower: function (roomName) {},
 
     /**
      * Transfer the energy from this structure to a creep. You can transfer resources to your creeps from hostile structures as well.
@@ -47,5 +47,5 @@ StructurePowerSpawn.prototype = {
      * @param {number} [amount] - The amount of energy to be transferred. If omitted, all the remaining amount of energy will be used.
      * @return {object}
      */
-    transferEnergy: function () {},
+    transferEnergy: function (target, amount (optional)) {},
 }

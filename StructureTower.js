@@ -22,21 +22,21 @@ StructureTower.prototype = {
      * @param {Creep} target - The target creep.
      * @return {object}
      */
-    attack: function () {},
+    attack: function (target) {},
 
     /**
      * Remotely heal any creep in the room.
      * @param {Creep} target - The target creep.
      * @return {object}
      */
-    heal: function () {},
+    heal: function (target) {},
 
     /**
      * Remotely repair any structure in the room.
      * @param {Spawn, Structure} target - The target structure.
      * @return {object}
      */
-    repair: function () {},
+    repair: function (target) {},
 
     /**
      * Transfer energy from the structure to a creep. You can transfer resources to your creeps from hostile structures as well.
@@ -44,5 +44,5 @@ StructureTower.prototype = {
      * @param {number} [amount] - The amount of energy to be transferred. If omitted, all the remaining amount of energy will be used.
      * @return {object}
      */
-    transferEnergy: function () {},
+    transferEnergy: function (target, amount (optional)) {},
 }

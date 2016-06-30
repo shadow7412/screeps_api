@@ -22,5 +22,5 @@ StructureRampart.prototype = {
      * @param {boolean} isPublic - Whether this rampart should be public or non-public.
      * @return {object}
      */
-    setPublic: function () {},
+    setPublic: function (isPublic) {},
 }

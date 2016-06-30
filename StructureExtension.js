@@ -23,5 +23,5 @@ StructureExtension.prototype = {
      * @param {number} [amount] - The amount of energy to be transferred. If omitted, all the remaining amount of energy will be used.
      * @return {object}
      */
-    transferEnergy: function () {},
+    transferEnergy: function (target, amount (optional)) {},
 }
