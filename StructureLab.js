@@ -47,7 +47,7 @@ StructureLab.prototype = {
      * @param {number} [bodyPartsCount] - The number of body parts of the corresponding type to be boosted. Body parts are always counted left-to-right for TOUGH, and right-to-left for other types. If undefined, all the eligible body parts are boosted.
      * @return {object}
      */
-    boostCreep: function (creep, bodyPartsCount (optional)) {},
+    boostCreep: function (creep, bodyPartsCount) {},
 
     /**
      * Produce mineral compounds using reagents from two another labs. The same input labs can be used by many output labs.
@@ -64,5 +64,5 @@ StructureLab.prototype = {
      * @param {number} [amount] - The amount of resources to be transferred. If omitted, all the available amount is used.
      * @return {object}
      */
-    transfer: function (target, resourceType, amount (optional)) {},
+    transfer: function (target, resourceType, amount) {},
 }

@@ -40,7 +40,7 @@ Flag.prototype = {
      * @param {string} [secondaryColor] - Secondary color of the flag. One of the COLOR_* constants.
      * @return {object}
      */
-    setColor: function (color, secondaryColor (optional)) {},
+    setColor: function (color, secondaryColor) {},
 
     /**
      * Set new position of the flag.

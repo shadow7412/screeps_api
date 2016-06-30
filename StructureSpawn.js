@@ -50,7 +50,7 @@ CLAIM
      * @param {string} [name] - The name of a new creep. It should be unique creep name, i.e. the Game.creeps object should not contain another creep with the same name (hash key). If not defined, a random name will be generated.
      * @return {object}
      */
-    canCreateCreep: function (body, name (optional)) {},
+    canCreateCreep: function (body, name) {},
 
     /**
      * Start the creep spawning process.
@@ -67,7 +67,7 @@ TOUGH
      * @param {any} [memory] - The memory of a new creep. If provided, it will be immediately stored into Memory.creeps[name].
      * @return {object}
      */
-    createCreep: function (body, name (optional), memory (optional)) {},
+    createCreep: function (body, name, memory) {},
 
     /**
      * Kill the creep and drop up to 100% of resources spent on its spawning and boosting depending on remaining life time. The target should be at adjacent square.
@@ -89,5 +89,5 @@ TOUGH
      * @param {number} [amount] - The amount of energy to be transferred. If omitted, all the remaining amount of energy will be used.
      * @return {object}
      */
-    transferEnergy: function (target, amount (optional)) {},
+    transferEnergy: function (target, amount) {},
 }

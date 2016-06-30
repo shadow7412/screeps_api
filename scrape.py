@@ -77,7 +77,7 @@ def write_prototype(prototype):
                     return_type = "object"
 
                     attr_file.write("     * @return {{{}}}\n".format(return_type))
-                    attr_body = "function ({}) {{}}".format(", ".join(param_cache.keys()))
+                    attr_body = "function ({}) {{}}".format(", ".join(k.replace("(optional)", "").strip() for k in param_cache.keys()))
                 else:
                     # No arguments to function
                     pass

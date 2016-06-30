@@ -29,5 +29,5 @@ StructureLink.prototype = {
      * @param {number} [amount] - The amount of energy to be transferred. If omitted, all the available energy is used.
      * @return {object}
      */
-    transferEnergy: function (target, amount (optional)) {},
+    transferEnergy: function (target, amount) {},
 }

@@ -131,7 +131,7 @@ Creep.prototype = {
      * @param {number} [amount] - The amount of resource units to be dropped. If omitted, all the available carried amount is used.
      * @return {object}
      */
-    drop: function (resourceType, amount (optional)) {},
+    drop: function (resourceType, amount) {},
 
     /**
      * Get the quantity of live body parts of the given type. Fully damaged parts do not count.
@@ -213,7 +213,7 @@ Any options supported by Room.findPath method.
      * @param {boolean} noPathFinding - If this option is set to true, moveTo method will return ERR_NOT_FOUND if there is no memorized path to reuse. This can significantly save CPU time in some cases. The default value is false.
      * @return {object}
      */
-    moveTo: function (x, y, target, opts (optional), reusePath, serializeMemory, noPathFinding) {},
+    moveTo: function (x, y, target, opts, reusePath, serializeMemory, noPathFinding) {},
 
     /**
      * Toggle auto notification when the creep is under attack. The notification will be sent to your account email. Turned on by default.
@@ -281,7 +281,7 @@ Any options supported by Room.findPath method.
      * @param {number} [amount] - The amount of resources to be transferred. If omitted, all the available carried amount is used.
      * @return {object}
      */
-    transfer: function (target, resourceType, amount (optional)) {},
+    transfer: function (target, resourceType, amount) {},
 
     /**
      * Upgrade your controller to the next level using carried energy. Upgrading controllers raises your Global Control Level in parallel. Requires WORK and CARRY body parts. The target has to be within 3 squares range of the creep. A fully upgraded level 8 controller can't be upgraded with the power over 15 energy units per tick regardless of creeps power. The cumulative effect of all the creeps performing upgradeController in the current tick is taken into account. The effect can be boosted by ghodium mineral compounds (including limit increase).

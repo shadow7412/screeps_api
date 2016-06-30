@@ -44,7 +44,7 @@ RoomPosition.prototype = {
      * @param {string} [secondaryColor] - The secondary color of a new flag. Should be one of the COLOR_* constants. The default value is equal to color.
      * @return {object}
      */
-    createFlag: function (name (optional), color (optional), secondaryColor (optional)) {},
+    createFlag: function (name, color, secondaryColor) {},
 
     /**
      * Find an object with the shortest path from the given position. Uses A* search algorithm and Dijkstra's algorithm.
@@ -75,7 +75,7 @@ dijkstra is faster when there are a lot of possible targets or when the closest 
 The default value is determined automatically using heuristics.
      * @return {object}
      */
-    findClosestByPath: function (type, objects, opts (optional), filter, algorithm) {},
+    findClosestByPath: function (type, objects, opts, filter, algorithm) {},
 
     /**
      * Find an object with the shortest linear distance from the given position.
@@ -90,7 +90,7 @@ Only the objects which pass the filter using the Lodash.filter method will be us
      * @param {object, function, string} filter - Only the objects which pass the filter using the Lodash.filter method will be used.
      * @return {object}
      */
-    findClosestByRange: function (type, objects, opts (optional), filter) {},
+    findClosestByRange: function (type, objects, opts, filter) {},
 
     /**
      * Find all objects in the specified linear range.
@@ -100,7 +100,7 @@ Only the objects which pass the filter using the Lodash.filter method will be us
      * @param {object} [opts] - See Room.find.
      * @return {object}
      */
-    findInRange: function (type, objects, range, opts (optional)) {},
+    findInRange: function (type, objects, range, opts) {},
 
     /**
      * Find an optimal path to the specified position using A* search algorithm. This method is a shorthand for Room.findPath. If the target is in another room, then the corresponding exit will be used as a target.
@@ -110,7 +110,7 @@ Only the objects which pass the filter using the Lodash.filter method will be us
      * @param {object} [opts] - An object containing pathfinding options flags (see Room.findPath for more details).
      * @return {object}
      */
-    findPathTo: function (x, y, target, opts (optional)) {},
+    findPathTo: function (x, y, target, opts) {},
 
     /**
      * Get linear direction to the specified position.

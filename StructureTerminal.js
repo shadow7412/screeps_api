@@ -25,7 +25,7 @@ StructureTerminal.prototype = {
      * @param {string} [description] - The description of the transaction. It is visible to the recipient. The maximum length is 100 characters.
      * @return {object}
      */
-    send: function (resourceType, amount, destination, description (optional)) {},
+    send: function (resourceType, amount, destination, description) {},
 
     /**
      * Transfer resource from this terminal to a creep. The target has to be at adjacent square. You can transfer resources to your creeps from hostile structures as well.
@@ -34,5 +34,5 @@ StructureTerminal.prototype = {
      * @param {number} [amount] - The amount of resources to be transferred. If omitted, all the available amount is used.
      * @return {object}
      */
-    transfer: function (target, resourceType, amount (optional)) {},
+    transfer: function (target, resourceType, amount) {},
 }

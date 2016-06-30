@@ -85,7 +85,7 @@ Room.prototype = {
      * @param {string} [secondaryColor] - The secondary color of a new flag. Should be one of the COLOR_* constants. The default value is equal to color.
      * @return {object}
      */
-    createFlag: function (x, y, pos, name (optional), color (optional), secondaryColor (optional)) {},
+    createFlag: function (x, y, pos, name, color, secondaryColor) {},
 
     /**
      * Find all objects of the specified type in the room.
@@ -99,7 +99,7 @@ The result list will be filtered using the Lodash.filter method.
      * @param {object, function, string} filter - The result list will be filtered using the Lodash.filter method.
      * @return {object}
      */
-    find: function (type, opts (optional), filter) {},
+    find: function (type, opts, filter) {},
 
     /**
      * Find the exit direction en route to another room.
@@ -175,7 +175,7 @@ The maximum allowed rooms to search. The default (and maximum) is 16. This is on
      * @param {number} maxRooms - The maximum allowed rooms to search. The default (and maximum) is 16. This is only used when the new PathFinder is enabled.
      * @return {object}
      */
-    findPath: function (fromPos, toPos, opts (optional), ignoreCreeps, ignoreDestructibleStructures, ignoreRoads, costCallback, ignore, avoid, maxOps, heuristicWeight, serialize, maxRooms) {},
+    findPath: function (fromPos, toPos, opts, ignoreCreeps, ignoreDestructibleStructures, ignoreRoads, costCallback, ignore, avoid, maxOps, heuristicWeight, serialize, maxRooms) {},
 
     /**
      * Creates a RoomPosition object at the specified location.
@@ -203,7 +203,7 @@ The maximum allowed rooms to search. The default (and maximum) is 16. This is on
      * @param {boolean} [asArray] - Set to true if you want to get the result as a plain array.
      * @return {object}
      */
-    lookAtArea: function (top, left, bottom, right, asArray (optional)) {},
+    lookAtArea: function (top, left, bottom, right, asArray) {},
 
     /**
      * Get an object with the given type at the specified room position.
@@ -225,5 +225,5 @@ The maximum allowed rooms to search. The default (and maximum) is 16. This is on
      * @param {boolean} [asArray] - Set to true if you want to get the result as a plain array.
      * @return {object}
      */
-    lookForAtArea: function (type, top, left, bottom, right, asArray (optional)) {},
+    lookForAtArea: function (type, top, left, bottom, right, asArray) {},
 }
